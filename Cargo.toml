@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "crates/axol_core",
+    "crates/ebpf_probe",
+]
+resolver = "2"

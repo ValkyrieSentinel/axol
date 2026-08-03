@@ -1,0 +1,10 @@
+[package]
+name = "ebpf_probe"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aya-ebpf = "0.1"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
