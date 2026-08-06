@@ -2,5 +2,17 @@
 members = [
     "crates/axol_core",
     "crates/ebpf_probe",
+    "crates/asm_scanner"
 ]
 resolver = "2"
+
+[profile.dev]
+opt-level = 2
+debug = true
+overflow-checks = false
+
+[profile.release]
+panic = "abort"
+opt-level = 3
+
+

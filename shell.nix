@@ -2,11 +2,7 @@
 
 pkgs.mkShell {
   buildInputs = with pkgs; [
-    cargo
-    rustc
-    rust-analyzer
     bpf-linker
-    bpftool
     clang
     llvm
     libbpf
@@ -14,6 +10,7 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
-    echo " Axol Defense Environment (NixOS) Ready!"
+    export LIBCLANG_PATH="${pkgs.llvmPackages.libclang.lib}/lib"
+    echo " Axol Environment Ready! "
   '';
 }
